@@ -1,3 +1,4 @@
+<script>
 // Scroll animation
 const faders = document.querySelectorAll('.fade-in');
 
@@ -20,3 +21,4 @@ const appearOnScroll = new IntersectionObserver(function(
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+</script>
