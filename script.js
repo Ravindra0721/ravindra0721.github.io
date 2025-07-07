@@ -1,12 +1,12 @@
 <script>
-// Scroll animation
+// script.js
 
-
-const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+// Intersection Observer for animations
+const faders = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 
 const appearOptions = {
-  threshold: 0.3,
-  rootMargin: "0px 0px -100px 0px"
+  threshold: 0.2,
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
@@ -17,8 +17,20 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
   });
 }, appearOptions);
 
-animatedElements.forEach(el => {
-  appearOnScroll.observe(el);
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// Smooth scroll for nav links
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
 
 </script>
