@@ -1,17 +1,12 @@
-
-<script>
-// Scroll animation
-const faders = document.querySelectorAll('.fade-in');
+// Scroll animation for all animated sections
+const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 
 const appearOptions = {
   threshold: 0.3,
   rootMargin: "0px 0px -100px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  observer
-) {
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('visible');
@@ -19,7 +14,6 @@ const appearOnScroll = new IntersectionObserver(function(
   });
 }, appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+animatedElements.forEach(el => {
+  appearOnScroll.observe(el);
 });
-</script>
