@@ -3,132 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ravindra Lohar - WordPress Developer</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>WordPress Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Background -->
-  <div class="bg-animation">
-    <div class="floating-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-  </div>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">Ravindra</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <header class="hero">
+    <h1 class="hero-title">Hi, I'm <span>Ravindra</span></h1>
+    <p class="hero-subtitle">A WordPress Developer</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-badge">💼 Available for Projects</span>
-      <h1>WordPress & <span class="highlight">PHP</span> Developer</h1>
-      <p>Creating powerful, scalable web solutions with WordPress, PHP, MySQL, and modern JavaScript.</p>
-      <div class="cta-buttons">
-        <a href="#projects" class="cta-primary">🚀 View My Work</a>
-        <a href="#contact" class="cta-secondary">💬 Let's Talk</a>
-      </div>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I specialize in WordPress theme development, plugin customization, and Elementor-based designs. Let's build something great together!</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card fade-in">
+      <h3>WooCommerce Shop</h3>
+      <p>Custom Elementor shop page with animated product grid and cart integration.</p>
+    </div>
+    <div class="project-card fade-in">
+      <h3>Custom Blog Theme</h3>
+      <p>Designed and developed a fast, SEO-optimized theme for WordPress blogs.</p>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <div class="about-text slide-in-left">
-        <h3>Full-Stack WordPress Developer</h3>
-        <p>Over 5 years of experience in building custom WordPress themes, plugins, and scalable apps.</p>
-        <div class="about-stats">
-          <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">Projects Completed</span></div>
-          <div class="stat-card"><span class="stat-number">5+</span><span class="stat-label">Years Experience</span></div>
-          <div class="stat-card"><span class="stat-number">30+</span><span class="stat-label">Happy Clients</span></div>
-          <div class="stat-card"><span class="stat-number">99%</span><span class="stat-label">Client Satisfaction</span></div>
-        </div>
-      </div>
-    </div>
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>WordPress</li>
+      <li>Elementor Pro</li>
+      <li>HTML/CSS/JS</li>
+      <li>WooCommerce</li>
+    </ul>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2 class="section-title">My Expertise</h2>
-    <div class="skills-grid fade-in">
-      <!-- Sample Skill -->
-      <div class="skill-category">
-        <span class="skill-icon">🎯</span>
-        <h3>WordPress Development</h3>
-        <ul class="skill-list">
-          <li>Custom Themes</li>
-          <li>Plugin Development</li>
-          <li>WooCommerce</li>
-          <li>REST API</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid fade-in">
-      <div class="project-card">
-        <div class="project-image">🏪</div>
-        <div class="project-content">
-          <h3 class="project-title">E-Commerce Site</h3>
-          <p class="project-description">Built with WooCommerce and React components.</p>
-          <div class="project-tech">
-            <span class="tech-tag">WordPress</span>
-            <span class="tech-tag">React</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link">🔗 Live Demo</a>
-            <a href="#" class="project-link">📁 GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Let's Work Together</h2>
-    <div class="contact-content fade-in">
-      <p>Ready to bring your ideas to life? Let's connect!</p>
-      <div class="contact-info">
-        <a href="mailto:your.email@example.com" class="contact-card">
-          <span class="contact-icon">📧</span>
-          <h3>Email Me</h3>
-          <p>your.email@example.com</p>
-        </a>
-        <a href="https://github.com/yourusername" class="contact-card">
-          <span class="contact-icon">🐙</span>
-          <h3>GitHub</h3>
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <h3>LinkedIn</h3>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Ravindra Lohar. Made with ❤️</p>
+    <p>© 2025 Ravindra Lohar | <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
