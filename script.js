@@ -1,4 +1,7 @@
-// Scroll animation for all animated sections
+<script>
+// Scroll animation
+
+
 const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 
 const appearOptions = {
@@ -17,3 +20,5 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 animatedElements.forEach(el => {
   appearOnScroll.observe(el);
 });
+
+</script>
