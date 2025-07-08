@@ -1,154 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravindra Lohar - WordPress Developer</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Background Animation -->
-  <div class="bg-animation">
-    <div class="floating-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">Ravindra</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-badge">💼 Available for Projects</span>
-      <h1>WordPress & <span class="highlight">PHP</span> Developer</h1>
-      <p>Creating powerful, scalable web solutions with WordPress, PHP, MySQL, and modern JavaScript.</p>
-      <div class="cta-buttons">
-        <a href="#projects" class="cta-primary">🚀 View My Work</a>
-        <a href="#contact" class="cta-secondary">💬 Let's Talk</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section fade-in">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <div class="about-text slide-in-left">
-        <h3>Full-Stack WordPress Developer</h3>
-        <p>I specialize in custom WordPress themes, plugins, and full-stack apps. I build clean, scalable code and love solving real-world problems with elegant solutions.</p>
-        <div class="about-stats">
-          <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">Projects</span></div>
-          <div class="stat-card"><span class="stat-number">5+</span><span class="stat-label">Years</span></div>
-          <div class="stat-card"><span class="stat-number">30+</span><span class="stat-label">Clients</span></div>
-          <div class="stat-card"><span class="stat-number">99%</span><span class="stat-label">Satisfaction</span></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">&lt;WP Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section fade-in">
-    <h2 class="section-title">My Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <span class="skill-icon">🎯</span>
-        <h3>WordPress</h3>
-        <ul class="skill-list">
-          <li>Themes & Plugins</li>
-          <li>WooCommerce</li>
-          <li>REST API</li>
-          <li>Security</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <span class="skill-icon">⚙️</span>
-        <h3>Backend</h3>
-        <ul class="skill-list">
-          <li>PHP / Laravel</li>
-          <li>MySQL</li>
-          <li>APIs</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <span class="skill-icon">🎨</span>
-        <h3>Frontend</h3>
-        <ul class="skill-list">
-          <li>HTML / CSS / JS</li>
-          <li>React / Vue</li>
-          <li>UX Design</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section fade-in">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">🛒</div>
-        <div class="project-content">
-          <h3>E-Commerce Platform</h3>
-          <p>WooCommerce shop with advanced filters, custom plugins, and Stripe integration.</p>
-          <div class="project-tech">
-            <span class="tech-tag">PHP</span>
-            <span class="tech-tag">WooCommerce</span>
-            <span class="tech-tag">React</span>
-          </div>
-          <div class="project-links">
-            <a href="#">🔗 Live</a>
-            <a href="#">📁 GitHub</a>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">WordPress Developer</h1>
+            <p class="hero-subtitle">Full-Stack Web Developer & Database Expert</p>
+            <p class="hero-description">Crafting beautiful, responsive websites with HTML, CSS, PHP, and MySQL</p>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section fade-in">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="contact-content">
-      <p>I’m open to freelance, full-time roles, and collaborations. Let’s build something together!</p>
-      <div class="contact-info">
-        <a href="mailto:ravindra@example.com" class="contact-card">
-          <span class="contact-icon">📧</span>
-          <h3>Email</h3>
-          <p>ravindra@example.com</p>
-        </a>
-        <a href="https://github.com/ravindralohar" class="contact-card">
-          <span class="contact-icon">🐙</span>
-          <h3>GitHub</h3>
-          <p>@ravindralohar</p>
-        </a>
-        <a href="https://linkedin.com/in/ravindralohar" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <h3>LinkedIn</h3>
-          <p>ravindralohar</p>
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3 class="skill-title">WordPress Development</h3>
+                    <p class="skill-description">Custom themes, plugins, and full WordPress solutions. Expert in WordPress architecture and best practices.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <p class="skill-description">Modern HTML5, CSS3, and JavaScript. Responsive design and cross-browser compatibility.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3 class="skill-title">PHP Development</h3>
+                    <p class="skill-description">Server-side scripting, custom applications, and API integrations with clean, maintainable code.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-title">MySQL Database</h3>
+                    <p class="skill-description">Database design, optimization, and management. Complex queries and performance tuning.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="skill-title">Responsive Design</h3>
+                    <p class="skill-description">Mobile-first approach with Bootstrap, CSS Grid, and Flexbox for all device compatibility.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="skill-title">Performance Optimization</h3>
+                    <p class="skill-description">Speed optimization, caching strategies, and SEO best practices for maximum performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Ravindra Lohar. Crafted with ❤️</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate WordPress developer with over 5 years of experience in creating stunning, functional websites. My expertise spans across the entire web development stack, from frontend user interfaces to backend database management.</p>
+                    <p>I specialize in custom WordPress themes and plugins, ensuring each project is tailored to meet specific client needs. My strong foundation in PHP and MySQL allows me to build robust, scalable solutions that perform exceptionally well.</p>
+                    <p>I'm committed to writing clean, maintainable code and staying updated with the latest web development trends and best practices.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Custom WordPress e-commerce solution with advanced product management, payment integration, and inventory tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">WooCommerce</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">News Magazine Site</h3>
+                        <p class="project-description">Custom WordPress theme for a news magazine with advanced categorization, user management, and content scheduling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Custom Theme</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Restaurant Website</h3>
+                        <p class="project-description">Responsive restaurant website with online reservations, menu management, and customer review system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Custom Plugin</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>developer@wpexpert.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>New York, NY</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Availability</h3>
+                            <p>Mon - Fri: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
