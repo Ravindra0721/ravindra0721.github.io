@@ -1,5 +1,4 @@
-/* Reset and Base Styles */
-<style>
+
 /* Base Styles */
 :root {
     --primary-color: #6c63ff;
@@ -757,4 +756,4 @@ section {
         grid-template-columns: 1fr;
     }
 }
-</style>
+
