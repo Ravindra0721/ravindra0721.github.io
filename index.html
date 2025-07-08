@@ -1,305 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | WordPress & Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WordPress Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #00ffcc;
+      --secondary: #1e1e2f;
+      --bg: #0a0a0a;
+      --text: #f0f0f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--secondary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 255, 204, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 5rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .projects, .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--secondary);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,255,204,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary);
+      margin-top: 4rem;
+    }
+
+    .socials a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">YN</a>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+
+  <header>
+    <h1>Ravindra Lohar</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="animate__animated animate__fadeInDown">Hi, I'm <span class="highlight">Your Name</span></h1>
-                <div class="animated-text animate__animated animate__fadeIn">
-                    <span id="typed"></span>
-                </div>
-                <p class="animate__animated animate__fadeInUp">I build beautiful, functional websites with WordPress and custom code solutions.</p>
-                <div class="cta-buttons animate__animated animate__fadeInUp">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
-                </div>
-            </div>
-            <div class="hero-image animate__animated animate__zoomIn">
-                <img src="https://via.placeholder.com/500x500" alt="Web Developer">
-            </div>
-        </div>
-    </section>
+  <section class="hero">
+    <h1>I'm a WordPress Developer</h1>
+    <p>Expert in PHP, MySQL, Elementor, WooCommerce & Custom Themes</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title animate__animated animate__fadeInDown">About <span class="highlight">Me</span></h2>
-            <div class="about-content">
-                <div class="about-image animate__animated animate__fadeInLeft">
-                    <img src="https://via.placeholder.com/400x400" alt="Your Name">
-                </div>
-                <div class="about-text animate__animated animate__fadeInRight">
-                    <h3>Who am I?</h3>
-                    <p>I'm a passionate WordPress developer with experience creating custom themes, plugins, and full-stack solutions. I specialize in bridging the gap between design and functionality.</p>
-                    
-                    <div class="info-list">
-                        <div class="info-item">
-                            <span class="info-label">Name:</span>
-                            <span class="info-value">Your Name</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Email:</span>
-                            <span class="info-value">your.email@example.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Experience:</span>
-                            <span class="info-value">X+ Years</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Freelance:</span>
-                            <span class="info-value">Available</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-wordpress"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Ravindra Lohar, a passionate WordPress Developer with experience in building high-conversion websites, eCommerce platforms, and custom plugins. I specialize in Elementor Pro, WooCommerce, and backend logic using PHP & MySQL.</p>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title animate__animated animate__fadeInDown">My <span class="highlight">Skills</span></h2>
-            <div class="skills-grid">
-                <!-- Skill Item 1 -->
-                <div class="skill-item animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                    <div class="skill-icon">
-                        <i class="fab fa-wordpress"></i>
-                    </div>
-                    <h3>WordPress Development</h3>
-                    <p>Custom themes, plugins, WooCommerce, and headless WordPress solutions.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%"></div>
-                    </div>
-                </div>
-                
-                <!-- Skill Item 2 -->
-                <div class="skill-item animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML/CSS</h3>
-                    <p>Semantic HTML5, CSS3, Sass, Bootstrap, and responsive design principles.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%"></div>
-                    </div>
-                </div>
-                
-                <!-- Skill Item 3 -->
-                <div class="skill-item animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                    <div class="skill-icon">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <h3>PHP & MySQL</h3>
-                    <p>Custom PHP applications, database design, and WordPress backend development.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%"></div>
-                    </div>
-                </div>
-                
-                <!-- Skill Item 4 -->
-                <div class="skill-item animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p>jQuery, React, Vue.js, and custom interactive front-end solutions.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>WooCommerce Store</h3>
+        <p>Custom-built WooCommerce site for electronics brand using Elementor and custom hooks.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Site</h3>
+        <p>Built my personal animated portfolio using HTML, CSS, and JavaScript with GitHub hosting.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Plugin</h3>
+        <p>Developed a plugin to automate product import/export from API.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title animate__animated animate__fadeInDown">My <span class="highlight">Projects</span></h2>
-            <div class="projects-filter animate__animated animate__fadeIn">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wordpress">WordPress</button>
-                <button class="filter-btn" data-filter="php">PHP/MySQL</button>
-                <button class="filter-btn" data-filter="custom">Custom</button>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-item animate__animated animate__fadeInUp" data-category="wordpress">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="WordPress E-commerce">
-                        <div class="project-overlay">
-                            <h3>Premium WooCommerce Theme</h3>
-                            <p>A custom WooCommerce theme with advanced product filtering.</p>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-item animate__animated animate__fadeInUp" data-wow-delay="0.1s" data-category="php">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Custom CMS">
-                        <div class="project-overlay">
-                            <h3>Custom PHP CMS</h3>
-                            <p>A lightweight CMS built with PHP and MySQL for small businesses.</p>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-item animate__animated animate__fadeInUp" data-wow-delay="0.2s" data-category="wordpress">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Membership Plugin">
-                        <div class="project-overlay">
-                            <h3>Membership Plugin</h3>
-                            <p>A WordPress plugin for managing premium content and subscriptions.</p>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-item animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-category="custom">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="React Dashboard">
-                        <div class="project-overlay">
-                            <h3>React Admin Dashboard</h3>
-                            <p>A custom admin dashboard built with React and REST API.</p>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">WordPress</div>
+      <div class="card">PHP & MySQL</div>
+      <div class="card">Elementor Pro</div>
+      <div class="card">WooCommerce</div>
+      <div class="card">HTML / CSS / JS</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title animate__animated animate__fadeInDown">Get In <span class="highlight">Touch</span></h2>
-            <div class="contact-content">
-                <div class="contact-info animate__animated animate__fadeInLeft">
-                    <h3>Let's Talk About Your Project</h3>
-                    <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out!</p>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <span>your.email@example.com</span>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <span>Your City, Country</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form animate__animated animate__fadeInRight">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                    <div id="form-message"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or connect on social media!</p>
+    <div class="socials">
+      <a href="https://github.com/ravindra0721" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#">YN</a>
-                    <p>WordPress & Full Stack Developer</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Me</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-wordpress"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Ravindra Lohar | WordPress Developer Portfolio</p>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js" defer></script>
+  <script>
+    // Optional scroll animation or loader can go here
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('active', window.scrollY > 50);
+    });
+  </script>
+
 </body>
 </html>
