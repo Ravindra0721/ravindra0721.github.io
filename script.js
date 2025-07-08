@@ -115,7 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add typing effect to hero title
-    const heroTitle
-
 </script>
