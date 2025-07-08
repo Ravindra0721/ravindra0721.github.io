@@ -3,51 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WordPress Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Ravindra Lohar - WordPress Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     :root {
-      --primary: #00ffcc;
-      --secondary: #1e1e2f;
-      --bg: #0a0a0a;
-      --text: #f0f0f0;
+      --primary: #00ffc3;
+      --bg: #0f0f1a;
+      --accent: #1a1a2e;
+      --text: #ffffff;
+      --glow: 0 0 10px #00ffc3, 0 0 20px #00ffc3, 0 0 40px #00ffc3;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
       scroll-behavior: smooth;
     }
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
     header {
-      background-color: var(--secondary);
-      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(15, 15, 26, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 999;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 255, 204, 0.2);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 1rem 2rem;
+      box-shadow: 0 0 10px #00ffc3;
     }
 
     header h1 {
       color: var(--primary);
+      text-shadow: var(--glow);
     }
 
     nav a {
-      margin-left: 1rem;
       color: var(--text);
+      margin-left: 1.5rem;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -55,45 +59,37 @@
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
+      padding: 6rem 2rem;
+      max-width: 1000px;
       margin: auto;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-size: 2rem;
     }
 
     .hero {
       text-align: center;
-      padding-top: 5rem;
+      margin-top: 5rem;
+      animation: fadeIn 2s ease;
     }
 
-    .hero h1 {
-      font-size: 3rem;
+    .hero h2 {
+      font-size: 2.5rem;
       color: var(--primary);
+      text-shadow: var(--glow);
     }
 
     .hero p {
-      font-size: 1.2rem;
       margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     .btn {
-      display: inline-block;
       margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 2rem;
+      background: transparent;
       border: 2px solid var(--primary);
       color: var(--primary);
-      background: transparent;
+      font-weight: 600;
+      border-radius: 30px;
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -103,47 +99,66 @@
       color: #000;
     }
 
-    .projects, .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+    h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
     }
 
     .card {
-      background: var(--secondary);
+      background-color: var(--accent);
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,255,204,0.2);
-      transition: transform 0.3s;
+      border-radius: 12px;
+      margin: 1rem 0;
+      box-shadow: 0 0 15px rgba(0, 255, 195, 0.2);
+      transition: transform 0.4s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skills .card {
+      text-align: center;
+    }
+
+    .socials {
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: var(--secondary);
+      background: var(--accent);
       margin-top: 4rem;
     }
 
-    .socials a {
-      margin: 0 0.5rem;
-      color: var(--primary);
-      font-size: 1.5rem;
-      transition: transform 0.3s;
-    }
-
-    .socials a:hover {
-      transform: scale(1.2);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Ravindra Lohar</h1>
+    <h1>Ravindra</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -153,65 +168,74 @@
   </header>
 
   <section class="hero">
-    <h1>I'm a WordPress Developer</h1>
-    <p>Expert in PHP, MySQL, Elementor, WooCommerce & Custom Themes</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <h2>👨‍💻 WordPress Developer & PHP Expert</h2>
+    <p>I build powerful, scalable WordPress websites & plugins using PHP, MySQL, Elementor & WooCommerce.</p>
+    <a class="btn" href="#projects">Explore Projects</a>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Ravindra Lohar, a passionate WordPress Developer with experience in building high-conversion websites, eCommerce platforms, and custom plugins. I specialize in Elementor Pro, WooCommerce, and backend logic using PHP & MySQL.</p>
+    <p>I’m a full-stack WordPress developer with 5+ years of experience. I specialize in building high-converting websites, custom themes, plugins, and REST API integrations. My mission is to make businesses shine online.</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
       <div class="card">
-        <h3>WooCommerce Store</h3>
-        <p>Custom-built WooCommerce site for electronics brand using Elementor and custom hooks.</p>
+        <h3>Ecommerce Electronics Store</h3>
+        <p>Built a full-featured WooCommerce site with Elementor, payment gateway & custom filters.</p>
       </div>
       <div class="card">
-        <h3>Portfolio Site</h3>
-        <p>Built my personal animated portfolio using HTML, CSS, and JavaScript with GitHub hosting.</p>
+        <h3>Portfolio Website</h3>
+        <p>Animated GitHub-hosted portfolio built using HTML, CSS, JS, inspired by trading dashboards.</p>
       </div>
       <div class="card">
-        <h3>Custom Plugin</h3>
-        <p>Developed a plugin to automate product import/export from API.</p>
+        <h3>Custom WordPress Plugin</h3>
+        <p>Developed a real-time stock tracker plugin fetching data from REST APIs and displaying charts.</p>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">WordPress</div>
+    <div class="grid skills">
+      <div class="card">WordPress Development</div>
       <div class="card">PHP & MySQL</div>
       <div class="card">Elementor Pro</div>
       <div class="card">WooCommerce</div>
-      <div class="card">HTML / CSS / JS</div>
-      <div class="card">Git & GitHub</div>
+      <div class="card">REST API / JSON</div>
+      <div class="card">Git / GitHub</div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out via email or connect on social media!</p>
+    <p>Let's collaborate! Reach me via email or connect on social media.</p>
     <div class="socials">
       <a href="https://github.com/ravindra0721" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:ravindra@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ravindra Lohar | WordPress Developer Portfolio</p>
+    <p>© 2025 Ravindra Lohar | WordPress Developer</p>
   </footer>
 
   <script>
-    // Optional scroll animation or loader can go here
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('active', window.scrollY > 50);
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "fadeIn 1s ease forwards";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll("section").forEach(sec => {
+      sec.style.opacity = 0;
+      observer.observe(sec);
     });
   </script>
 
