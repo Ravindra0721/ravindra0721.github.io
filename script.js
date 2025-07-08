@@ -1,111 +1,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Particles.js
-    particlesJS('particles-js', {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#6c63ff"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#6c63ff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "grab"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 140,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Typed.js Initialization
     var typed = new Typed('#typed', {
@@ -119,12 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         backSpeed: 30,
         loop: true,
         showCursor: true,
-        cursorChar: '|',
-        autoInsertCss: true
+        cursorChar: '|'
     });
-
-    // WOW.js Initialization
-    new WOW().init();
 
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -228,7 +120,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const messageDiv = document.getElementById('form-message');
             
-            fetch(this.action, {
+            // Simulate form submission for GitHub Pages
+            messageDiv.textContent = "Form submission is disabled in this demo. Please contact me directly at your.email@example.com";
+            messageDiv.className = 'success';
+            messageDiv.style.display = 'block';
+            
+            // In a real implementation, you would use fetch() to submit to a server
+            /* 
+            fetch('your-endpoint', {
                 method: 'POST',
                 body: formData
             })
@@ -247,19 +146,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 messageDiv.textContent = 'An error occurred. Please try again.';
                 messageDiv.className = 'error';
             });
+            */
         });
     }
 
     // Animate elements on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.wow');
+        const elements = document.querySelectorAll('.animate__animated');
         
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const elementVisible = 150;
             
             if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('animated');
+                element.classList.add(element.getAttribute('class').split(' ')[1]);
             }
         });
     };
