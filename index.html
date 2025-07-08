@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordPress Developer Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>John Doe | WordPress & Full Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Particle JS Background -->
+    <div id="particles-js"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">&lt;WP Dev/&gt;</a>
+        <div class="container">
+            <a href="#" class="logo">JD</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -24,61 +33,20 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">WordPress Developer</h1>
-            <p class="hero-subtitle">Full-Stack Web Developer & Database Expert</p>
-            <p class="hero-description">Crafting beautiful, responsive websites with HTML, CSS, PHP, and MySQL</p>
-            <a href="#contact" class="cta-button">Let's Work Together</a>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-wordpress"></i>
-                    </div>
-                    <h3 class="skill-title">WordPress Development</h3>
-                    <p class="skill-description">Custom themes, plugins, and full WordPress solutions. Expert in WordPress architecture and best practices.</p>
+            <div class="hero-content">
+                <h1 class="wow fadeInDown">Hi, I'm <span class="highlight">John Doe</span></h1>
+                <div class="animated-text wow fadeIn">
+                    <span id="typed"></span>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3 class="skill-title">Frontend Development</h3>
-                    <p class="skill-description">Modern HTML5, CSS3, and JavaScript. Responsive design and cross-browser compatibility.</p>
+                <p class="wow fadeInUp">I build beautiful, functional websites with WordPress and custom code solutions.</p>
+                <div class="cta-buttons wow fadeInUp">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <h3 class="skill-title">PHP Development</h3>
-                    <p class="skill-description">Server-side scripting, custom applications, and API integrations with clean, maintainable code.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="skill-title">MySQL Database</h3>
-                    <p class="skill-description">Database design, optimization, and management. Complex queries and performance tuning.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="skill-title">Responsive Design</h3>
-                    <p class="skill-description">Mobile-first approach with Bootstrap, CSS Grid, and Flexbox for all device compatibility.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="skill-title">Performance Optimization</h3>
-                    <p class="skill-description">Speed optimization, caching strategies, and SEO best practices for maximum performance.</p>
-                </div>
+            </div>
+            <div class="hero-image wow zoomIn">
+                <img src="images/developer.png" alt="Web Developer">
             </div>
         </div>
     </section>
@@ -86,29 +54,95 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title wow fadeInDown">About <span class="highlight">Me</span></h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate WordPress developer with over 5 years of experience in creating stunning, functional websites. My expertise spans across the entire web development stack, from frontend user interfaces to backend database management.</p>
-                    <p>I specialize in custom WordPress themes and plugins, ensuring each project is tailored to meet specific client needs. My strong foundation in PHP and MySQL allows me to build robust, scalable solutions that perform exceptionally well.</p>
-                    <p>I'm committed to writing clean, maintainable code and staying updated with the latest web development trends and best practices.</p>
+                <div class="about-image wow fadeInLeft">
+                    <img src="images/profile.jpg" alt="John Doe">
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Projects Completed</div>
+                <div class="about-text wow fadeInRight">
+                    <h3>Who am I?</h3>
+                    <p>I'm a passionate WordPress developer with 5+ years of experience creating custom themes, plugins, and full-stack solutions. I specialize in bridging the gap between design and functionality.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">John Doe</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">john@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Experience:</span>
+                            <span class="info-value">5+ Years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Freelance:</span>
+                            <span class="info-value">Available</span>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Happy Clients</div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-wordpress"></i></a>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title wow fadeInDown">My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <!-- Skill Item 1 -->
+                <div class="skill-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="skill-icon">
+                        <i class="fab fa-wordpress"></i>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support</div>
+                    <h3>WordPress Development</h3>
+                    <p>Custom themes, plugins, WooCommerce, and headless WordPress solutions.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill Item 2 -->
+                <div class="skill-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS</h3>
+                    <p>Semantic HTML5, CSS3, Sass, Bootstrap, and responsive design principles.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill Item 3 -->
+                <div class="skill-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP & MySQL</h3>
+                    <p>Custom PHP applications, database design, and WordPress backend development.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill Item 4 -->
+                <div class="skill-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>jQuery, React, Vue.js, and custom interactive front-end solutions.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
                     </div>
                 </div>
             </div>
@@ -118,62 +152,58 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title wow fadeInDown">My <span class="highlight">Projects</span></h2>
+            <div class="projects-filter wow fadeIn">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                <button class="filter-btn" data-filter="php">PHP/MySQL</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <!-- Project 1 -->
+                <div class="project-item wow fadeInUp" data-category="wordpress">
                     <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-commerce Platform</h3>
-                        <p class="project-description">Custom WordPress e-commerce solution with advanced product management, payment integration, and inventory tracking.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">WooCommerce</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">Source Code</a>
+                        <img src="images/project1.jpg" alt="WordPress E-commerce">
+                        <div class="project-overlay">
+                            <h3>Premium WooCommerce Theme</h3>
+                            <p>A custom WooCommerce theme with advanced product filtering.</p>
+                            <a href="#" class="project-link">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <!-- Project 2 -->
+                <div class="project-item wow fadeInUp" data-wow-delay="0.1s" data-category="php">
                     <div class="project-image">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">News Magazine Site</h3>
-                        <p class="project-description">Custom WordPress theme for a news magazine with advanced categorization, user management, and content scheduling.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">Custom Theme</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">Source Code</a>
+                        <img src="images/project2.jpg" alt="Custom CMS">
+                        <div class="project-overlay">
+                            <h3>Custom PHP CMS</h3>
+                            <p>A lightweight CMS built with PHP and MySQL for small businesses.</p>
+                            <a href="#" class="project-link">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <!-- Project 3 -->
+                <div class="project-item wow fadeInUp" data-wow-delay="0.2s" data-category="wordpress">
                     <div class="project-image">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Restaurant Website</h3>
-                        <p class="project-description">Responsive restaurant website with online reservations, menu management, and customer review system.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">Custom Plugin</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Bootstrap</span>
+                        <img src="images/project3.jpg" alt="Membership Plugin">
+                        <div class="project-overlay">
+                            <h3>Membership Plugin</h3>
+                            <p>A WordPress plugin for managing premium content and subscriptions.</p>
+                            <a href="#" class="project-link">View Details</a>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">Source Code</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-item wow fadeInUp" data-wow-delay="0.3s" data-category="custom">
+                    <div class="project-image">
+                        <img src="images/project4.jpg" alt="React Dashboard">
+                        <div class="project-overlay">
+                            <h3>React Admin Dashboard</h3>
+                            <p>A custom admin dashboard built with React and REST API.</p>
+                            <a href="#" class="project-link">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -184,65 +214,97 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title wow fadeInDown">Get In <span class="highlight">Touch</span></h2>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                <div class="contact-info wow fadeInLeft">
+                    <h3>Let's Talk About Your Project</h3>
+                    <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out!</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <h3>Email</h3>
-                            <p>developer@wpexpert.com</p>
+                            <h4>Email</h4>
+                            <span>john@example.com</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <h4>Phone</h4>
+                            <span>+1 (555) 123-4567</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h3>Location</h3>
-                            <p>New York, NY</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h3>Availability</h3>
-                            <p>Mon - Fri: 9AM - 6PM</p>
+                            <h4>Location</h4>
+                            <span>San Francisco, CA</span>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                
+                <div class="contact-form wow fadeInRight">
+                    <form id="contactForm" action="php/contact.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="form-message"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">JD</a>
+                    <p>WordPress & Full Stack Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-wordpress"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 John Doe. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
