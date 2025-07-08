@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -167,4 +167,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Run once on page load
 });
-</script>
+
