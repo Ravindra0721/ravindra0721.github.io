@@ -3,76 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ravindra Lohar - WordPress Expert</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+  <title>Ravindra Lohar - WordPress Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     :root {
-      --primary: #00e6e6;
-      --dark: #0f0c29;
-      --bg-glass: rgba(255, 255, 255, 0.05);
-      --shadow-glow: 0 0 20px rgba(0, 230, 230, 0.7);
+      --bg-gradient: linear-gradient(135deg, #1f1c2c, #928dab);
+      --accent: #00d4ff;
+      --glass: rgba(255, 255, 255, 0.05);
     }
 
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
-      overflow-x: hidden;
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-gradient);
+      color: #ffffff;
       scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
     header {
-      text-align: center;
       padding: 120px 20px 80px;
-      background: radial-gradient(circle at top, #00e6e6 0%, #0f0c29 80%);
-      background-attachment: fixed;
-      animation: fadeIn 1.2s ease-out forwards;
+      text-align: center;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
     }
 
     header h1 {
       font-size: 3.5rem;
-      font-family: 'Orbitron', sans-serif;
-      text-shadow: var(--shadow-glow);
+      font-weight: 800;
+      letter-spacing: 2px;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 10px;
-      color: #ccc;
+      margin-top: 15px;
+      color: #bbb;
     }
 
     section {
       padding: 80px 8%;
-      animation: fadeUp 1.2s ease-out;
     }
 
     h2 {
-      font-size: 2.5rem;
       text-align: center;
-      color: var(--primary);
+      font-size: 2.5rem;
       margin-bottom: 40px;
-      text-shadow: var(--shadow-glow);
+      color: var(--accent);
     }
 
-    .glass {
-      background: var(--bg-glass);
+    .glass-card {
+      background: var(--glass);
       backdrop-filter: blur(10px);
-      border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
       padding: 25px;
-      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .glass:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 0 20px var(--primary);
+    .glass-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);
     }
 
     .about p {
@@ -83,7 +85,7 @@
       color: #ddd;
     }
 
-    .grid {
+    .skills, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
@@ -91,63 +93,48 @@
     }
 
     .skill i {
-      font-size: 2rem;
-      color: var(--primary);
+      font-size: 2.2rem;
+      color: var(--accent);
       margin-bottom: 10px;
     }
 
-    .skill, .project-card {
+    .skill {
       text-align: center;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .project-card h3 {
+      color: white;
       margin-bottom: 10px;
-      color: #fff;
     }
 
     .project-card p {
-      color: #bbb;
       font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact .glass-card {
+      display: inline-block;
+      padding: 30px 50px;
     }
 
     .contact p {
-      text-align: center;
       font-size: 1.1rem;
       margin: 10px 0;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    a:hover {
-      color: #fff;
-      text-shadow: var(--shadow-glow);
-    }
-
     footer {
-      background: #111;
       text-align: center;
       padding: 30px;
-      color: #777;
+      background: #121212;
+      color: #888;
       font-size: 0.9rem;
     }
 
-    /* Animation Keyframes */
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
       h2 { font-size: 1.8rem; }
@@ -156,61 +143,67 @@
 </head>
 <body>
 
+  <!-- Hero -->
   <header>
     <h1>Ravindra Lohar</h1>
-    <p>✨ WordPress Wizard • PHP Ninja • UI/UX Enthusiast ✨</p>
+    <p>WordPress Expert | Full Stack Developer | UI/UX Designer</p>
   </header>
 
+  <!-- About -->
   <section class="about">
     <h2>About Me</h2>
-    <div class="glass about">
-      <p>I am a full-stack WordPress developer who specializes in building dynamic, mobile-friendly websites using Elementor, WooCommerce, PHP, and MySQL. I blend design with functionality to deliver blazing fast and SEO-optimized experiences.</p>
+    <div class="glass-card">
+      <p>I’m a WordPress developer who crafts powerful, visually engaging, and mobile-optimized websites. From custom themes and WooCommerce stores to full-stack projects — I turn code into creative business solutions.</p>
     </div>
   </section>
 
+  <!-- Skills -->
   <section>
     <h2>Skills</h2>
-    <div class="grid">
-      <div class="glass skill"><i class="fab fa-wordpress"></i><div>WordPress</div></div>
-      <div class="glass skill"><i class="fab fa-php"></i><div>PHP</div></div>
-      <div class="glass skill"><i class="fas fa-database"></i><div>MySQL</div></div>
-      <div class="glass skill"><i class="fab fa-js-square"></i><div>JavaScript</div></div>
-      <div class="glass skill"><i class="fab fa-html5"></i><div>HTML5</div></div>
-      <div class="glass skill"><i class="fab fa-css3-alt"></i><div>CSS3</div></div>
-      <div class="glass skill"><i class="fas fa-plug"></i><div>Plugins</div></div>
-      <div class="glass skill"><i class="fas fa-cart-plus"></i><div>WooCommerce</div></div>
+    <div class="skills">
+      <div class="glass-card skill"><i class="fab fa-wordpress"></i><div>WordPress</div></div>
+      <div class="glass-card skill"><i class="fab fa-php"></i><div>PHP</div></div>
+      <div class="glass-card skill"><i class="fas fa-database"></i><div>MySQL</div></div>
+      <div class="glass-card skill"><i class="fab fa-html5"></i><div>HTML5</div></div>
+      <div class="glass-card skill"><i class="fab fa-css3-alt"></i><div>CSS3</div></div>
+      <div class="glass-card skill"><i class="fab fa-js"></i><div>JavaScript</div></div>
+      <div class="glass-card skill"><i class="fas fa-cart-plus"></i><div>WooCommerce</div></div>
+      <div class="glass-card skill"><i class="fas fa-plug"></i><div>Plugins & Themes</div></div>
     </div>
   </section>
 
+  <!-- Projects -->
   <section>
     <h2>Projects</h2>
-    <div class="grid">
-      <div class="glass project-card">
-        <h3>Ecom Pro Store</h3>
-        <p>Custom WooCommerce store with filters, cart animations, and Razorpay gateway.</p>
+    <div class="projects">
+      <div class="glass-card project-card">
+        <h3>WooCommerce Mega Store</h3>
+        <p>Multi-vendor e-commerce shop with payment gateways, filters, and custom dashboards.</p>
       </div>
-      <div class="glass project-card">
-        <h3>Corporate Elementor Site</h3>
-        <p>Designed and developed a modern responsive company site using Elementor Pro.</p>
+      <div class="glass-card project-card">
+        <h3>Elementor Business Website</h3>
+        <p>Responsive, SEO-optimized service website using Elementor Pro and motion effects.</p>
       </div>
-      <div class="glass project-card">
-        <h3>Custom Theme Builder</h3>
-        <p>ACF + PHP-based fully dynamic theme from scratch with Gutenberg blocks support.</p>
+      <div class="glass-card project-card">
+        <h3>Custom Portfolio Theme</h3>
+        <p>Hand-coded WordPress theme using PHP + ACF blocks with animation libraries.</p>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section class="contact">
     <h2>Contact</h2>
-    <div class="glass">
-      <p>Email: <a href="mailto:ravindra@example.com">ravindra@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/ravindra0721" target="_blank">github.com/ravindra0721</a></p>
-      <p>Location: India</p>
+    <div class="glass-card">
+      <p><strong>Email:</strong> <a href="mailto:ravindra@example.com">ravindra@example.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/ravindra0721" target="_blank">github.com/ravindra0721</a></p>
+      <p><strong>Location:</strong> India</p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Ravindra Lohar • Designed with ❤️ and animated code.
+    &copy; 2025 Ravindra Lohar. Built with passion and pixel perfection.
   </footer>
 </body>
 </html>
