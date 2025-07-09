@@ -1,119 +1,114 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ravindra Lohar - WordPress Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Ravindra Lohar - WordPress Expert</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #00e6e6;
+      --dark: #0f0c29;
+      --bg-glass: rgba(255, 255, 255, 0.05);
+      --shadow-glow: 0 0 20px rgba(0, 230, 230, 0.7);
+    }
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f0c29;  /* fallback for old browsers */
-      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-      color: #fff;
-      line-height: 1.6;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
       scroll-behavior: smooth;
-    }
-
-    a {
-      color: #1de9b6;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    a:hover {
-      color: #fff;
-      text-decoration: underline;
     }
 
     header {
       text-align: center;
-      padding: 100px 20px 60px;
-      background: linear-gradient(145deg, #6200ea, #3700b3);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      padding: 120px 20px 80px;
+      background: radial-gradient(circle at top, #00e6e6 0%, #0f0c29 80%);
+      background-attachment: fixed;
+      animation: fadeIn 1.2s ease-out forwards;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease-in-out;
+      font-size: 3.5rem;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: var(--shadow-glow);
     }
 
     header p {
       font-size: 1.2rem;
-      color: #ddd;
-      animation: fadeInUp 1.2s ease-in-out;
+      margin-top: 10px;
+      color: #ccc;
     }
 
     section {
-      padding: 80px 10%;
+      padding: 80px 8%;
+      animation: fadeUp 1.2s ease-out;
     }
 
     h2 {
-      text-align: center;
       font-size: 2.5rem;
+      text-align: center;
+      color: var(--primary);
       margin-bottom: 40px;
-      color: #1de9b6;
-      position: relative;
+      text-shadow: var(--shadow-glow);
     }
 
-    h2::after {
-      content: "";
-      width: 80px;
-      height: 3px;
-      background: #1de9b6;
-      display: block;
-      margin: 10px auto;
-      border-radius: 3px;
+    .glass {
+      background: var(--bg-glass);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      padding: 25px;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 20px var(--primary);
     }
 
     .about p {
-      max-width: 700px;
+      max-width: 800px;
       margin: auto;
+      text-align: center;
       font-size: 1.1rem;
-      color: #eee;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
+      color: #ddd;
     }
 
-    .skills, .projects {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
-    }
-
-    .skill, .project-card {
-      background: #1e1e2f;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 1s ease forwards;
-    }
-
-    .skill:hover, .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+      margin-top: 40px;
     }
 
     .skill i {
       font-size: 2rem;
-      color: #1de9b6;
+      color: var(--primary);
       margin-bottom: 10px;
+    }
+
+    .skill, .project-card {
+      text-align: center;
+      font-weight: bold;
     }
 
     .project-card h3 {
-      color: #fff;
       margin-bottom: 10px;
+      color: #fff;
     }
 
     .project-card p {
-      color: #ccc;
+      color: #bbb;
+      font-size: 0.95rem;
     }
 
     .contact p {
@@ -122,45 +117,40 @@
       margin: 10px 0;
     }
 
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: var(--shadow-glow);
+    }
+
     footer {
+      background: #111;
       text-align: center;
       padding: 30px;
-      background: #111;
+      color: #777;
       font-size: 0.9rem;
-      color: #aaa;
     }
 
-    /* Animations */
+    /* Animation Keyframes */
     @keyframes fadeIn {
-      0% {opacity: 0;}
-      100% {opacity: 1;}
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
+    /* Responsive */
     @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      section { padding: 60px 5%; }
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -168,57 +158,59 @@
 
   <header>
     <h1>Ravindra Lohar</h1>
-    <p>WordPress & Full Stack Developer • PHP • MySQL • Elementor • WooCommerce</p>
+    <p>✨ WordPress Wizard • PHP Ninja • UI/UX Enthusiast ✨</p>
   </header>
 
   <section class="about">
     <h2>About Me</h2>
-    <p>
-      I am a dedicated and creative WordPress developer with years of experience building high-performance websites. From custom themes and plugins to full-stack integrations, I create scalable, SEO-friendly, and visually engaging websites.
-    </p>
+    <div class="glass about">
+      <p>I am a full-stack WordPress developer who specializes in building dynamic, mobile-friendly websites using Elementor, WooCommerce, PHP, and MySQL. I blend design with functionality to deliver blazing fast and SEO-optimized experiences.</p>
+    </div>
   </section>
 
   <section>
     <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><i class="fab fa-wordpress"></i><br>WordPress</div>
-      <div class="skill"><i class="fab fa-php"></i><br>PHP</div>
-      <div class="skill"><i class="fas fa-database"></i><br>MySQL</div>
-      <div class="skill"><i class="fab fa-html5"></i><br>HTML5</div>
-      <div class="skill"><i class="fab fa-css3-alt"></i><br>CSS3</div>
-      <div class="skill"><i class="fab fa-js-square"></i><br>JavaScript</div>
-      <div class="skill"><i class="fas fa-plug"></i><br>Plugins</div>
-      <div class="skill"><i class="fas fa-shopping-cart"></i><br>WooCommerce</div>
+    <div class="grid">
+      <div class="glass skill"><i class="fab fa-wordpress"></i><div>WordPress</div></div>
+      <div class="glass skill"><i class="fab fa-php"></i><div>PHP</div></div>
+      <div class="glass skill"><i class="fas fa-database"></i><div>MySQL</div></div>
+      <div class="glass skill"><i class="fab fa-js-square"></i><div>JavaScript</div></div>
+      <div class="glass skill"><i class="fab fa-html5"></i><div>HTML5</div></div>
+      <div class="glass skill"><i class="fab fa-css3-alt"></i><div>CSS3</div></div>
+      <div class="glass skill"><i class="fas fa-plug"></i><div>Plugins</div></div>
+      <div class="glass skill"><i class="fas fa-cart-plus"></i><div>WooCommerce</div></div>
     </div>
   </section>
 
   <section>
     <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>WooCommerce Store</h3>
-        <p>Built a multi-vendor eCommerce store with payment, shipping, and affiliate integrations.</p>
+    <div class="grid">
+      <div class="glass project-card">
+        <h3>Ecom Pro Store</h3>
+        <p>Custom WooCommerce store with filters, cart animations, and Razorpay gateway.</p>
       </div>
-      <div class="project-card">
-        <h3>Custom Portfolio Theme</h3>
-        <p>Developed a lightweight and blazing fast WordPress theme using ACF and GSAP.</p>
+      <div class="glass project-card">
+        <h3>Corporate Elementor Site</h3>
+        <p>Designed and developed a modern responsive company site using Elementor Pro.</p>
       </div>
-      <div class="project-card">
-        <h3>Corporate Website</h3>
-        <p>Created a mobile-friendly corporate website with Elementor Pro and custom templates.</p>
+      <div class="glass project-card">
+        <h3>Custom Theme Builder</h3>
+        <p>ACF + PHP-based fully dynamic theme from scratch with Gutenberg blocks support.</p>
       </div>
     </div>
   </section>
 
   <section class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ravindra@example.com">ravindra@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/ravindra0721" target="_blank">github.com/ravindra0721</a></p>
-    <p>Location: India</p>
+    <div class="glass">
+      <p>Email: <a href="mailto:ravindra@example.com">ravindra@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/ravindra0721" target="_blank">github.com/ravindra0721</a></p>
+      <p>Location: India</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Ravindra Lohar. All rights reserved.
+    &copy; 2025 Ravindra Lohar • Designed with ❤️ and animated code.
   </footer>
 </body>
 </html>
